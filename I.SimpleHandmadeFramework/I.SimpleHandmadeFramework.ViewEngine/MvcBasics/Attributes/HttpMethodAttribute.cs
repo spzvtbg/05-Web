@@ -1,4 +1,4 @@
-﻿namespace I.SimpleHandmadeFramework.ViewEngine.Mvc.Attributes
+﻿namespace I.SimpleHandmadeFramework.ViewEngine.MvcBasics.Attributes
 {
     using System;
 

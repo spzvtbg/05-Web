@@ -1,4 +1,4 @@
-﻿namespace I.SimpleHandmadeFramework.ViewEngine.Mvc.Views
+﻿namespace I.SimpleHandmadeFramework.ViewEngine.MvcBasics.Views
 {
     using Contracts;
 

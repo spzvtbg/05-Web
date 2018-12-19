@@ -1,6 +1,6 @@
-﻿namespace I.SimpleHandmadeFramework.ViewEngine.Mvc
+﻿namespace I.SimpleHandmadeFramework.ViewEngine.MvcBasics
 {
-    using I.SimpleHandmadeFramework.ViewEngine.Mvc.Contracts;
+    using Contracts;
     using System;
 
     public class ActionResult : IActionResult
@@ -14,7 +14,7 @@
 
         public string Invoke()
         {
-            return null;
+            return this.Action.Render();
         }
     }
 }

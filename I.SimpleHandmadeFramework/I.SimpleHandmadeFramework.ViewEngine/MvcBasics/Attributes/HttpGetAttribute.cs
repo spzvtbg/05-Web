@@ -1,6 +1,6 @@
-﻿namespace I.SimpleHandmadeFramework.ViewEngine.Mvc.Attributes
+﻿namespace I.SimpleHandmadeFramework.ViewEngine.MvcBasics.Attributes
 {
-    using I.SimpleHandmadeFramework.Server.Http.Enums;
+    using Server.Http.Enums;
 
     public class HttpGetAttribute : HttpMethodAttribute
     {

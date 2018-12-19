@@ -16,4 +16,9 @@
     </Reference>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="MvcBasicsDemo\Models\" />
+    <Folder Include="MvcBasicsDemo\Views\" />
+  </ItemGroup>
+
 </Project>

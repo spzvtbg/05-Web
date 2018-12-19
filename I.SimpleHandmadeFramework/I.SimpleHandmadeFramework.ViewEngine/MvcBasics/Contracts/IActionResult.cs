@@ -1,4 +1,4 @@
-﻿namespace I.SimpleHandmadeFramework.ViewEngine.Mvc.Contracts
+﻿namespace I.SimpleHandmadeFramework.ViewEngine.MvcBasics.Contracts
 {
     public interface IActionResult : IInvocable
     {

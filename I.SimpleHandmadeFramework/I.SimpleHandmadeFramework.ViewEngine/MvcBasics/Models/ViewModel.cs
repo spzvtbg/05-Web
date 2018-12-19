@@ -1,4 +1,4 @@
-﻿namespace I.SimpleHandmadeFramework.ViewEngine.Mvc.Models
+﻿namespace I.SimpleHandmadeFramework.ViewEngine.MvcBasics.Models
 {
     using System.Collections.Generic;
 

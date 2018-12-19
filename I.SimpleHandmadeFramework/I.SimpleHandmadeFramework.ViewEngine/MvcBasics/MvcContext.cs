@@ -1,7 +1,7 @@
-﻿using System.Reflection;
-
-namespace I.SimpleHandmadeFramework.ViewEngine.Mvc
+﻿namespace I.SimpleHandmadeFramework.ViewEngine.MvcBasics
 {
+    using System.Reflection;
+
     public class MvcContext
     {
         private static MvcContext instance;
@@ -23,14 +23,14 @@ namespace I.SimpleHandmadeFramework.ViewEngine.Mvc
             }
         }
 
-        public static string AssemblyName { get; set; }
+        public string AssemblyName { get; set; }
 
-        public static string ControllersFolder { get; set; }
+        public string ControllersFolder { get; set; }
 
-        public static string ControllersSufix { get; set; }
+        public string ControllersSufix { get; set; }
 
-        public static string ViewsFolder { get; set; }
+        public string ViewsFolder { get; set; }
 
-        public static string ModelsFolder { get; set; }
+        public string ModelsFolder { get; set; }
     }
 }
