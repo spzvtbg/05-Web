@@ -1,13 +1,14 @@
-﻿using System.IO;
-
-namespace I.SimpleHandmadeFramework.Web
+﻿namespace I.SimpleHandmadeFramework.Web
 {
+    using Server;
+    using StandartRoutingDemo;
+    using ViewEngine.StandartRouting.Handlers;
+
     public class Startup
     {
         public static void Main()
         {
-            var html = File.ReadAllText("../../../Demo.html");
-            System.Console.WriteLine(html);
+            new HttpServerEngine(new HttpHandler(new AppConfig().Configure)).Run();
         }
     }
 }

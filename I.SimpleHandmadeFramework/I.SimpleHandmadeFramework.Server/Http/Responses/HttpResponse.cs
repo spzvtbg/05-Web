@@ -5,7 +5,6 @@
     using Common;
     using Contracts;
     using Enums;
-    using Headers;
     using System.Text;
 
     public abstract class HttpResponse : IHttpResponse
@@ -29,14 +28,12 @@
 
         public override string ToString()
         {
-            this.Cookies.Add(new HttpCookie(Stringifier.SID, this.Session.Id));
-            this.Headers.Add(new HttpHeader(Stringifier.Cookie, this.Cookies.ToString()));
-
             var responseBuilder = new StringBuilder();
 
-            responseBuilder.AppendLine(Stringifier.HttpVersion);
-            responseBuilder.AppendLine(this.StatusCode.ToString());
+            responseBuilder.Append(Stringifier.HttpVersion);
+            responseBuilder.Append(this.StatusCode.ToString());
             responseBuilder.Replace(Stringifier.Dash, Stringifier.Space);
+            responseBuilder.AppendLine();
             responseBuilder.AppendLine(this.Headers.ToString());
             responseBuilder.AppendLine();
             responseBuilder.AppendLine(this.Content);

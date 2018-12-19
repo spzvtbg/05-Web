@@ -67,12 +67,14 @@
                     newToken = match.Groups["regex"].Value;
                     parameters.Add(match.Groups["parameter"].Value);
                 }
-                
-                var tokenMatch = Regex.Match(newToken, tokenPattern);
-
-                if (!tokenMatch.Success)
+                else
                 {
-                    throw new InvalidOperationException($"Invalid route parameter found in [ServerRouteConfig.ParseRoute(string route[{route}], ...)].");
+                    var tokenMatch = Regex.Match(newToken, tokenPattern);
+
+                    if (!tokenMatch.Success)
+                    {
+                        throw new InvalidOperationException($"Invalid route parameter found in [ServerRouteConfig.ParseRoute(string route[{route}], ...)].");
+                    }
                 }
 
                 regexBuilder.Replace(placeHolder, $"/{newToken}{placeHolder}");

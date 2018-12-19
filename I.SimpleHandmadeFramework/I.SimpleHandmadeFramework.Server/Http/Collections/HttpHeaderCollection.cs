@@ -23,10 +23,12 @@
 
         public void Add(IHttpHeader header)
         {
-            if (this.Has(header.Key))
+            if (!this.Has(header.Key))
             {
-                this.Collection[header.Key].Add(header);
+                this.Collection[header.Key] = new List<IHttpHeader>();
             }
+
+            this.Collection[header.Key].Add(header);
         }
 
         public bool Has(string key)

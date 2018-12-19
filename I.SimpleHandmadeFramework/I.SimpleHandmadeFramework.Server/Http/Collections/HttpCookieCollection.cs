@@ -45,7 +45,7 @@
 
         public override string ToString()
         {
-            return $"Set-Cookie: {string.Join("; ", this.Collection.Values.Select(c => c.ToString()))}";
+            return string.Join("; ", this.Collection.Values.Select(c => c.ToString()));
         }
 
         public IEnumerator<IHttpCookie> GetEnumerator()
