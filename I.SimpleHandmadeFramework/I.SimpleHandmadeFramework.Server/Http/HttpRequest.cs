@@ -160,7 +160,7 @@
 
             var dataIndex = Array.IndexOf(this.requestRows, string.Empty) + 1;
 
-            this.Extract(this.requestRows[dataIndex], this.FormDataParameters);
+            this.Extract(WebUtility.UrlDecode(this.requestRows[dataIndex]), this.FormDataParameters);
         }
 
         private void Extract(string query, IHttpDataCollection queryParameters)
