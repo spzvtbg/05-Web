@@ -5,7 +5,8 @@
 
     public class HomeController : Controller
     {
-        public IActionResult Index(ViewModel model)
+        // /home/index?id=123
+        public IActionResult Index(int id)
         {
             return this.View();
         }
